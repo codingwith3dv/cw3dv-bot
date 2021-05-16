@@ -8,9 +8,10 @@ client.on('ready', () => {
 })
 
 client.on('message', (message) => {
+  if(message.author.bot)return;
   if(message.content === 'ping') {
     message.channel.send('pong');
-  } else if (mesage.content === 'Hello' || message.content === 'Hi') {
+  } else if (message.content === 'Hello' || message.content === 'Hi') {
     message.channel.send('Hi')
   }
 })
